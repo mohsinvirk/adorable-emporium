@@ -8,7 +8,7 @@ var HeaderStyle = {
   backgroundImage: `url(${Header})`,
   backgroundRepeat: 'no-repeat',
   backgroundAttachment: 'scroll',
-  backgroundPosition: 'center',
+  backgroundPosition: '100% 11%',
   backgroundSize: 'cover',
   backgroundOrigin: 'border-box'
 };
@@ -19,9 +19,9 @@ const HomeHeader = props => (
 
     <div className="header-container">
       <div className="content">
-        <h1>I love carpet. I love desk.</h1>
+        <h1>Sustainable Food Systems</h1>
         <Link to="/products" className="btn">
-          I love lamp
+          Go Green
         </Link>
       </div>
     </div>

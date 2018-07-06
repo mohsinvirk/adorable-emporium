@@ -18,7 +18,7 @@ class TopPicks extends Component {
 
     try {
       TopPicks = collections.find(collections => {
-        return collections.slug === 'top_picks';
+        return collections.slug === 'fresh-produce';
       });
     } catch (e) {
       TopPicks = collections[0];

@@ -3,3 +3,150 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.styles-list {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-text {
+  display: inline-block;
+  margin-top: -0.5rem;
+  font-size: 36px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 13px;
+  color: #202020;
+}
+
+.broken-body .light .scrolled .logo-link,
+.broken-body .light .scrolled a,
+.broken-body footer a,
+.cart .cart-list-headings,
+.cart .cart-listing.empty p,
+.down-arrow,
+.light .nav-container:not(.scrolled) .logo .logo-link,
+.light .nav-container:not(.scrolled) .primary-nav a,
+.light .nav-container:not(.scrolled) .secondary-nav a,
+.logo .logo-link,
+.mailing-list h2,
+.order-confirmation h2,
+.product h2,
+.product-list .product-item .title,
+.product-list .product-item.new::after,
+.product-list .product-item.sale::after,
+.pushy li,
+.select-country-restyle,
+.select-country-restyle::before,
+.select-fallback,
+.select-fallback::before,
+.select-restyle,
+.select-restyle::before,
+.style-links .style-link,
+.styles-list .styles-item .fake-btn,
+.styles-list .styles-item h3,
+.top-picks h2 {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #202020 !important;
+}
+
+.broken-body .light .scrolled .logo-link:link,
+.broken-body .light .scrolled .logo-link:visited,
+.broken-body .light .scrolled a:link,
+.broken-body .light .scrolled a:visited,
+.broken-body footer a:link,
+.broken-body footer a:visited,
+.light .nav-container:not(.scrolled) .logo .logo-link:link,
+.light .nav-container:not(.scrolled) .logo .logo-link:visited,
+.light .nav-container:not(.scrolled) .primary-nav a:link,
+.light .nav-container:not(.scrolled) .primary-nav a:visited,
+.light .nav-container:not(.scrolled) .secondary-nav a:link,
+.light .nav-container:not(.scrolled) .secondary-nav a:visited {
+  color: #202020;
+}
+
+.content h1 {
+  color: #202020;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #202020;
+}
+
+.header-container .btn:link,
+.header-container .btn:visited {
+  background: #95ed38;
+  border: 0;
+  color: #2d2d40;
+  font-weight: 500 !important;
+}
+
+.btn,
+.style-links .style-link,
+.styles-list .styles-item .fake-btn,
+[type='submit'],
+button {
+  background-color: #95ed38;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  color: #202020;
+  border: none;
+}
+
+.footer-text-content {
+  width: 233px;
+  height: 29px;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.3px;
+  color: #202020;
+}
+
+@media only screen and (max-width: 480px) {
+  .menu-btn.light:not(.scrolled):not(.active) {
+    color: #202020;
+  }
+  .content h1 {
+    font-size: 3rem;
+  }
+  .logo-text {
+    font-size: 21px;
+    font-weight: 300;
+  }
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+  .light .nav-container:not(.scrolled) .secondary-nav .cart:link,
+  .light .nav-container:not(.scrolled) .secondary-nav .cart:visited {
+    background: #202020;
+    color: #fff;
+  }
+  .pushy {
+    background: hsla(89, 100%, 95%, 1);
+  }
+  .styles-list .styles-item .fake-btn {
+    color: #fff !important;
+  }
+}
