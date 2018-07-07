@@ -77,9 +77,7 @@ class Categories extends Component {
                     alt={product.description}
                     aria-hidden="true"
                   />
-                  <div
-                    className="overlay fake-btn"
-                    style={{ background: '#4d4d4d' }}>
+                  <div className="overlay fake-btn">
                     Shop{' '}
                     <span className="hide-content">
                       our {category.name} collection{' '}

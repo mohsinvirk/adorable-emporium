@@ -13,7 +13,7 @@ body {
   display: inline-block;
   margin-top: -0.5rem;
   font-size: 36px;
-  font-weight: 600;
+  font-weight: 300;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
@@ -26,18 +26,9 @@ body {
 .broken-body footer a,
 .cart .cart-list-headings,
 .cart .cart-listing.empty p,
-.down-arrow,
 .light .nav-container:not(.scrolled) .logo .logo-link,
 .light .nav-container:not(.scrolled) .primary-nav a,
 .light .nav-container:not(.scrolled) .secondary-nav a,
-.logo .logo-link,
-.mailing-list h2,
-.order-confirmation h2,
-.product h2,
-.product-list .product-item .title,
-.product-list .product-item.new::after,
-.product-list .product-item.sale::after,
-.pushy li,
 .select-country-restyle,
 .select-country-restyle::before,
 .select-fallback,
@@ -46,8 +37,7 @@ body {
 .select-restyle::before,
 .style-links .style-link,
 .styles-list .styles-item .fake-btn,
-.styles-list .styles-item h3,
-.top-picks h2 {
+.styles-list .styles-item h3 {
   font-family: Montserrat, sans-serif;
   font-size: 18px;
   font-weight: normal;
@@ -55,7 +45,13 @@ body {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #202020 !important;
+  color: #202020;
+}
+.down-arrow {
+  color: black;
+}
+.styles-item h3 {
+  color: #fff !important;
 }
 
 .broken-body .light .scrolled .logo-link:link,
@@ -121,6 +117,12 @@ button {
   line-height: normal;
   letter-spacing: 0.3px;
   color: #202020;
+}
+.style-links .style-link {
+  letter-spacing: normal;
+  color: #9f9fae;
+  border: 3px solid #9f9fae;
+  background-color: #fff;
 }
 
 @media only screen and (max-width: 480px) {
