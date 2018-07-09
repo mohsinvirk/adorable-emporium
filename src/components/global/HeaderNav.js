@@ -17,6 +17,8 @@ const HeaderNav = () => (
       </Link>
     </div>
     <nav className="secondary-nav light">
+      <Link to="/login">Login</Link>
+      <Link to="/signup">SignUp</Link>
       <CartCounter />
     </nav>
   </div>

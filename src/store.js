@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === 'development') {
     enhancers.push(devToolsExtension());
   }
 
-  middleware.push(createLogger());
+  // middleware.push(createLogger());
 }
 
 // compose our middleware

@@ -8,6 +8,8 @@ if (process.env.REACT_APP_MOLTIN_CLIENT_ID) {
 
 const Moltin = MoltinGateway({
   client_id,
+  client_secret: 'uoB0vNkwxGUwLrMSnPU6IMrtR9MMqFBTZG1H385k7Y',
+  grant_type: 'implicit',
   application: 'react-demo-store'
 });
 
@@ -46,3 +48,39 @@ export const GetOrder = ID => Moltin.Orders.Get(ID);
 export const OrderPay = (ID, data) => Moltin.Orders.Payment(ID, data);
 
 export const DeleteCart = () => Moltin.Cart.Delete();
+
+export const CreateCustomer = customer => Moltin.Customers.Create(customer);
+
+// Createcustomer(customer).then(response => console.log(response).catch(e => console.log(e)))
+
+export const register = async ({ email, password, ...rest }) => {
+  const { json: { data: { name, id } } } = await Moltin.Customers.Create({
+    email,
+    password,
+    type: 'customer',
+    ...rest
+  });
+
+  const { token } = await login({ email, password });
+
+  return {
+    id,
+    name,
+    email,
+    token
+  };
+};
+
+export const login = async ({ email, password }) => {
+  const {
+    json: { data: { customer_id: id, token } }
+  } = await Moltin.Customers.Token(email, password);
+
+  return {
+    id,
+    token
+  };
+};
+
+export const GetCustomerToken = (email, password) =>
+  Moltin.Customers.Token(email, password);
