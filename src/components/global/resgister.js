@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CreateCustomer, GetCustomerToken } from '../../moltin';
+import { CreateCustomer, GetCustomerToken, GetACustomer } from '../../moltin';
 import Header from './HeaderNav';
 
 export default class SignUp extends React.Component {
@@ -28,12 +28,15 @@ export default class SignUp extends React.Component {
       .then(response => {
         GetCustomerToken(email, password)
           .then(result => {
-            const { id, token } = result.data;
-            localStorage.setItem('clientToken', token);
+            const { id, customer_id, token } = result.data;
+            localStorage.setItem('customerToken', token);
             localStorage.setItem('mcustomer', id);
-            console.log(
-              `Here is the clientToken ${token.toString()} and client id is ${id} `
-            );
+            localStorage.setItem('customer_id', customer_id);
+            const _customer_id = localStorage.getItem('customer_id');
+            GetACustomer(_customer_id).then(response => {
+              localStorage.setItem('customerEmail', response.data.email);
+            });
+            this.props.history.push('/myaccount');
           })
           .catch(error => {
             console.log(error);

@@ -10,6 +10,9 @@ const NavMenu = () => (
       <li className="pushy-link">
         <Link to="/styles">Styles</Link>
       </li>
+      <li className="pushy-link">
+        <Link to="/myAccount">My Account</Link>
+      </li>
     </ul>
   </nav>
 );

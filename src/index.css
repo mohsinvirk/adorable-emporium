@@ -124,6 +124,58 @@ button {
   border: 3px solid #9f9fae;
   background-color: #fff;
 }
+table {
+  max-width: 50rem;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+th {
+  text-align: left;
+}
+
+th,
+td {
+  border: 1px solid #dfdfdf;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .responsive-table {
+    border: 0;
+  }
+  .responsive-table thead {
+    display: none;
+  }
+  .responsive-table tbody {
+    background-color: #efefef;
+  }
+  .responsive-table th,
+  .responsive-table td {
+    padding: 0.5rem;
+    background-color: #fff;
+  }
+  .responsive-table tr {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .responsive-table tr:last-of-type {
+    margin-bottom: initial;
+  }
+  .responsive-table td {
+    display: block;
+    border-bottom: none;
+    text-align: right;
+  }
+  .responsive-table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+}
 
 @media only screen and (max-width: 480px) {
   .menu-btn.light:not(.scrolled):not(.active) {

@@ -11,18 +11,20 @@ import OneClickCheckout from './Checkout/OneClickCheckout';
 import OrderConfirmationContainer from './Orders/OrderConfirmationContainer';
 import NotFound from './global/NotFound';
 import Login from './global/login';
-// import MobileNav from './global/Mobile/MobileNav';
+import MobileNav from './global/Mobile/MobileNav';
 import Footer from './global/Footer';
 import Register from './global/resgister';
+import Account from './global/myaccount';
 
 const App = props => (
   <div>
-    {/* <MobileNav /> */}
+    {<MobileNav />}
 
     <Switch>
       <Route exact path="/" component={Home} />
-      <Route exact path="/signup" component={Register} />
       <Route exact path="/login" component={Login} />
+      <Route exact path="/signup" component={Register} />
+      <Route exact path="/myaccount" component={Account} />
       <Route path="/cart" component={Cart} />
       <Route path="/styles" component={StylesContainer} />
       <Route path="/products" component={ProductsContainer} />

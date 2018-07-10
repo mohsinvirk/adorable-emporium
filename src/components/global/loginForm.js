@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { GetCustomerToken } from '../../moltin';
+import { withRouter } from 'react-router-dom';
 
-export default class Login extends React.Component {
+import { GetCustomerToken, GetACustomer } from '../../moltin';
+
+class Login extends React.Component {
   state = {
     email: '',
     password: '',
@@ -21,12 +23,15 @@ export default class Login extends React.Component {
 
     GetCustomerToken(email, password)
       .then(result => {
-        const { id, token } = result.data;
-        localStorage.setItem('clientToken', token);
+        const { id, customer_id, token } = result.data;
+        localStorage.setItem('customerToken', token);
         localStorage.setItem('mcustomer', id);
-        console.log(
-          `Here is the clientToken ${token.toString()} and client id is ${id} `
-        );
+        localStorage.setItem('customer_id', customer_id);
+        const _customer_id = localStorage.getItem('customer_id');
+        GetACustomer(_customer_id).then(response => {
+          localStorage.setItem('customerEmail', response.data.email);
+        });
+        this.props.history.push('/myaccount');
       })
       .catch(error => {
         console.log(error);
@@ -73,3 +78,5 @@ export default class Login extends React.Component {
     );
   }
 }
+
+export default withRouter(Login);

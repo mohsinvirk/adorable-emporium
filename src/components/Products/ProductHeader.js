@@ -24,32 +24,63 @@ class ProductHeader extends Component {
     });
 
     var product = productArray[0];
-
-    return (
-      <header className="push">
-        <div className="nav-container">
-          <nav className="primary-nav">
-            <Link to="/products">Products</Link>
-            <Link to="/styles">Styles</Link>
-          </nav>
-          <div className="logo light">
-            <Link to="/" className="logo-link">
-              <span className="logo-text">
-                <b> GREEN</b> HEART
-              </span>
-            </Link>
+    const token = localStorage.getItem('customerToken');
+    if (!token) {
+      return (
+        <header className="push">
+          <div className="nav-container">
+            <nav className="primary-nav">
+              <Link to="/products">Products</Link>
+              <Link to="/styles">Styles</Link>
+              <Link to="/login">Login</Link>
+              <Link to="/register">SignUp</Link>
+            </nav>
+            <div className="logo light">
+              <Link to="/" className="logo-link">
+                <span className="logo-text">
+                  <b> GREEN</b> HEART
+                </span>
+              </Link>
+            </div>
+            <nav className="secondary-nav">
+              <CartCounter />
+            </nav>
           </div>
-          <nav className="secondary-nav">
-            <CartCounter />
-          </nav>
-        </div>
-        <div className="header-container hide-content">
-          <div className="content">
-            <h1>Product details for {product.name}</h1>
+          <div className="header-container hide-content">
+            <div className="content">
+              <h1>Product details for {product.name}</h1>
+            </div>
           </div>
-        </div>
-      </header>
-    );
+        </header>
+      );
+    } else {
+      return (
+        <header className="push">
+          <div className="nav-container">
+            <nav className="primary-nav">
+              <Link to="/products">Products</Link>
+              <Link to="/styles">Styles</Link>
+              <Link to="/myaccount">My Account</Link>
+            </nav>
+            <div className="logo light">
+              <Link to="/" className="logo-link">
+                <span className="logo-text">
+                  <b> GREEN</b> HEART
+                </span>
+              </Link>
+            </div>
+            <nav className="secondary-nav">
+              <CartCounter />
+            </nav>
+          </div>
+          <div className="header-container hide-content">
+            <div className="content">
+              <h1>Product details for {product.name}</h1>
+            </div>
+          </div>
+        </header>
+      );
+    }
   }
 }
 
