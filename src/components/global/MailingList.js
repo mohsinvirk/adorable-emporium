@@ -5,7 +5,7 @@ const MailingList = () => (
     <div className="content">
       <div className="mailing-list-content">
         <h2>
-          <span className="love">Support</span> your Farmer Today!
+          <span className="love">Source</span> Local Produce Today!
         </h2>
         <p>
           information about information about{' '}

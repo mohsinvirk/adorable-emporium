@@ -8,10 +8,7 @@ const NavMenu = () => {
       <nav id="mobile-nav" aria-hidden="true" className="pushy pushy-left">
         <ul>
           <li className="pushy-link">
-            <Link to="/products">Products</Link>
-          </li>
-          <li className="pushy-link">
-            <Link to="/styles">Styles</Link>
+            <Link to="/produce">Produce</Link>
           </li>
           <li className="pushy-link">
             <Link to="/login">Login</Link>
@@ -27,10 +24,7 @@ const NavMenu = () => {
       <nav id="mobile-nav" aria-hidden="true" className="pushy pushy-left">
         <ul>
           <li className="pushy-link">
-            <Link to="/products">Products</Link>
-          </li>
-          <li className="pushy-link">
-            <Link to="/styles">Styles</Link>
+            <Link to="/produce">Produce</Link>
           </li>
           <li className="pushy-link">
             <Link to="/myAccount">My Account</Link>

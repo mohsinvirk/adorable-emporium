@@ -37,7 +37,7 @@ class CheckoutItems extends Component {
                 </div>
                 <div className="price">
                   <span className="hide-content">Product subtotal: </span>
-                  {'$' + item.unit_price.amount / 100}
+                  {'€' + item.unit_price.amount / 100}
                 </div>
               </div>
             </div>

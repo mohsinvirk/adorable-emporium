@@ -13,8 +13,7 @@ const HeaderNav = props => {
         <header className="push">
           <div className="nav-container" style={props.style}>
             <nav className="primary-nav light">
-              <Link to="/products">Products</Link>
-              <Link to="/styles">Styles</Link>
+              <Link to="/produce">Produce</Link>
               <Link to="/login">Login</Link>
               <Link to="/signup">SignUp</Link>
             </nav>
@@ -39,8 +38,7 @@ const HeaderNav = props => {
         <header className="push">
           <div className="nav-container" style={props.style}>
             <nav className="primary-nav light">
-              <Link to="/products">Products</Link>
-              <Link to="/styles">Styles</Link>
+              <Link to="/produce">Produce</Link>
               <Link to="/myAccount">My Account</Link>
             </nav>
             <div className="logo light">

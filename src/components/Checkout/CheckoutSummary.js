@@ -74,22 +74,22 @@ class CheckoutSummary extends Component {
             <div className="price-item">
               Subtotal<span className="hide-content"> for all products</span>
               <span className="price">
-                {'$' +
+                {'€' +
                   this.props.cart.cart.meta.display_price.without_tax.amount /
                     100}
               </span>
             </div>
             <div className="price-item">
-              Tax<span className="price">{'$' + tax}</span>
+              Tax<span className="price">{'€' + tax}</span>
             </div>
             <div className="price-item">
-              Shipping<span className="price">$0</span>
+              Shipping<span className="price">€0</span>
             </div>
           </div>
           <div className="total-price price">
             Total{' '}
             <span className="price">
-              {'$' +
+              {'€' +
                 this.props.cart.cart.meta.display_price.without_tax.amount /
                   100}
             </span>

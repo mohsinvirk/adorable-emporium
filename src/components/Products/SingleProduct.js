@@ -67,7 +67,7 @@ class SingleProduct extends Component {
         return (
           <p className="price">
             <span className="hide-content">Unit price </span>
-            {'$' + product.meta.display_price.with_tax.amount / 100}
+            {'€' + product.meta.display_price.with_tax.amount / 100}
           </p>
         );
       } catch (e) {
@@ -217,7 +217,7 @@ class SingleProduct extends Component {
                   </div>
                   <div className="row">
                     <div className="label">Delivery</div>
-                    <div className="value">$5.95</div>
+                    <div className="value">€5.95</div>
                   </div>
                 </div>
                 <div className="footer">

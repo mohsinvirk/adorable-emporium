@@ -22,8 +22,7 @@ const StylesHeader = ({ style, header }) => {
         }}>
         <div className="nav-container">
           <nav className="primary-nav">
-            <Link to="/products">Products</Link>
-            <Link to="/styles">Styles</Link>
+            <Link to="/produce">Produce</Link>
             <Link to="/login">Login</Link>
             <Link to="/register">SignUp</Link>
           </nav>
@@ -62,8 +61,7 @@ const StylesHeader = ({ style, header }) => {
         }}>
         <div className="nav-container">
           <nav className="primary-nav">
-            <Link to="/products">Products</Link>
-            <Link to="/styles">Styles</Link>
+            <Link to="/produce">Produce</Link>
             <Link to="/myAccount">My Account</Link>
           </nav>
           <div className="logo light">

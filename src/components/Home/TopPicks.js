@@ -74,7 +74,7 @@ class TopPicks extends Component {
                   <div className="overlay-content">
                     <div className="title">{top_pick.name}</div>
                     <div className="price">
-                      {'$' + top_pick.meta.display_price.with_tax.amount / 100}
+                      {'€' + top_pick.meta.display_price.with_tax.amount / 100}
                     </div>
                   </div>
                 </div>

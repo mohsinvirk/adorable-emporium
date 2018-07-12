@@ -57,7 +57,7 @@ class StyleProducts extends Component {
                   <div className="overlay-content">
                     <div className="title">{product.name}</div>
                     <div className="price">
-                      {'$' + product.meta.display_price.with_tax.amount / 100}
+                      {'€' + product.meta.display_price.with_tax.amount / 100}
                     </div>
                   </div>
                 </div>

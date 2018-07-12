@@ -34,7 +34,7 @@ class Cart extends Component {
       products.fetched === true
     ) {
       if (cart.cart.data[0]) {
-        var subtotal = '$' + cart.cart.meta.display_price.with_tax.amount / 100;
+        var subtotal = '€' + cart.cart.meta.display_price.with_tax.amount / 100;
         return (
           <div>
             <MobileNav />

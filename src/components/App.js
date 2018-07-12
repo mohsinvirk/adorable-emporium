@@ -26,7 +26,7 @@ const App = props => (
       <Route exact path="/signup" component={Register} />
       <Route exact path="/myaccount" component={Account} />
       <Route path="/cart" component={Cart} />
-      <Route path="/styles" component={StylesContainer} />
+      <Route path="/produce" component={StylesContainer} />
       <Route path="/products" component={ProductsContainer} />
       <Route path="/checkout" component={CheckoutContainer} />
       <Route

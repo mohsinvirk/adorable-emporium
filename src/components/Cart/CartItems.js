@@ -144,13 +144,13 @@ class CartItems extends Component {
                 </div>
                 <div className="cart-price">
                   <p className="price">
-                    <span className={`item-price ${TotalPriceHidden}`}>
-                      <span className="hide-content">Price per item </span>$<span className="product-price">
+                    <span className={`item-price €{TotalPriceHidden}`}>
+                      <span className="hide-content">Price per item </span>€<span className="product-price">
                         {item.unit_price.amount / 100}
                       </span>
                       <span aria-hidden="true"> / </span>
                     </span>
-                    <span className="hide-content">Product subtotal </span>$<span className="total-product-price">
+                    <span className="hide-content">Product subtotal </span>€<span className="total-product-price">
                       {item.unit_price.amount / 100 * item.quantity}
                     </span>
                   </p>
